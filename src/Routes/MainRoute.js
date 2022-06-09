@@ -5,7 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import DashBoard from '../Pages/Dashboard'
-import DatametricReport from '../Pages/DatametricReport'
+import DatametricReport from '../Pages/DatametricReport/index2'
 const MainRoute = () => {
   return (
     <Routes>
