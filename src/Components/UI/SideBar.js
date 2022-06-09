@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Logo from '../../Assets/Images/lunivatech-360-01.png'
-import { AiFillHome } from "react-icons/ai"
+// import { AiFillHome } from "react-icons/ai"
 
-import { MdDashboard, MdAttachMoney ,MdEmail} from 'react-icons/md'
+import { MdDashboard, MdAttachMoney, MdEmail } from 'react-icons/md'
 import { IoBarChartSharp, IoLogoWechat, IoDocumentText, IoDocument, IoDocumentTextOutline } from 'react-icons/io5'
-import { FaBuilding,FaStethoscope } from 'react-icons/fa'
-import {BsClipboardData, BsCalendar3, BsGearWideConnected, BsFillCalendarCheckFill} from 'react-icons/bs'
+import { FaBuilding, FaStethoscope } from 'react-icons/fa'
+import { BsClipboardData, BsCalendar3, BsGearWideConnected, BsFillCalendarCheckFill } from 'react-icons/bs'
 
 const navData = [
   {

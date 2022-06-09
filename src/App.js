@@ -1,6 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+// import { createGlobalStyle } from 'styled-components';
 import './App.css';
-import SideBar from './Components/UI/SideBar';
+// import SideBar from './Components/UI/SideBar';
 import Layouts from './Layouts/index'
 
 
