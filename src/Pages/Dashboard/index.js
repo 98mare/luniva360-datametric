@@ -1,31 +1,15 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+// import { Col, Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 
 const index = () => {
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <Demmo>
-          </Demmo>
-        </Col>
-        <Col>
-          <Demmo>
-          </Demmo>
-        </Col>
-        <Col>
-          <Demmo>
-          </Demmo>
-        </Col>
-        <Col>
-          <Demmo>
-          </Demmo>
-        </Col>
-      </Row>
-
-
-    </Container>
+    <>
+      <Demmo></Demmo>
+      {/* <button>click me</button> */}
+      <Link to={'/DatametricReport'}>click me</Link>
+    </>
   )
 }
 

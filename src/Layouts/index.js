@@ -1,17 +1,26 @@
+import { Layout } from 'antd'
 import React from 'react'
 // import { Button } from 'react-bootstrap'
 import styled from 'styled-components'
 import NavBar from '../Components/UI/NavBar'
 import SideBar from '../Components/UI/SideBar'
-// import Dashboard from '../Pages/Dashboard/index'
+import Dashboard from '../Pages/Dashboard/index'
+import MainRoute from '../Routes/MainRoute'
 
-const index = () => {
+const index = (props) => {
+  // console.log('porps');
   return (
     <LayoutMainContainer>
       <SideBar></SideBar>
       <div className="mainContainer">
         <NavBar />
-        {/* <Dashboard></Dashboard> */}
+        {/* <Layout> */}
+          <div className="container">
+            <MainRoute {...props} />
+          </div>
+
+        {/* </Layout> */}
+
       </div>
     </LayoutMainContainer>
   )
@@ -34,7 +43,12 @@ const LayoutMainContainer = styled.div`
     right: 0;
     width: calc(100% - 250px);
     min-height: 100vh;
-    /* background: #fefefe; */
+    background: #fefefe;
     padding: 20px;
+
+    
   }
+  .container{
+      margin-top: 18px;
+    }
 `
