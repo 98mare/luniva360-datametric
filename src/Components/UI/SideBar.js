@@ -3,10 +3,94 @@ import styled from 'styled-components'
 import Logo from '../../Assets/Images/lunivatech-360-01.png'
 import { AiFillHome } from "react-icons/ai"
 
-import {MdDashboard} from 'react-icons/md'
-import {IoBarChartSharp} from 'react-icons/io5'
-import {RiBillFill, RiLogoutBoxFill} from 'react-icons/ri'
-import {HiDocumentReport} from 'react-icons/hi'
+import { MdDashboard, MdAttachMoney ,MdEmail} from 'react-icons/md'
+import { IoBarChartSharp, IoLogoWechat, IoDocumentText, IoDocument, IoDocumentTextOutline } from 'react-icons/io5'
+import { FaBuilding,FaStethoscope } from 'react-icons/fa'
+import {BsClipboardData, BsCalendar3, BsGearWideConnected, BsFillCalendarCheckFill} from 'react-icons/bs'
+
+const navData = [
+  {
+    name: 'Datametric Report',
+    icon: FaBuilding,
+    pathname: ''
+  },
+  {
+    name: 'Finance Dashboard',
+    icon: IoBarChartSharp,
+    pathname: ''
+  },
+  {
+    name: 'Department Analytucs',
+    icon: FaBuilding,
+    pathname: ''
+  },
+  {
+    name: 'Outsourcing analytics',
+    icon: BsClipboardData,
+    pathname: ''
+  },
+  {
+    name: 'Marketing Analytics',
+    icon: BsCalendar3,
+    pathname: ''
+  },
+  {
+    name: 'TAT Analysis',
+    icon: IoLogoWechat,
+    pathname: ''
+  },
+  {
+    name: 'Test Analysis',
+    icon: FaStethoscope,
+    pathname: ''
+  },
+  {
+    name: 'Expense Management',
+    icon: MdAttachMoney,
+    pathname: ''
+  },
+  {
+    name: 'QC Control',
+    icon: BsGearWideConnected,
+    pathname: ''
+  },
+  {
+    name: 'Dynamic Report',
+    icon: IoDocumentText,
+    pathname: ''
+  },
+  {
+    name: 'Edit Bill',
+    icon: IoDocument,
+    pathname: ''
+  },
+  {
+    name: 'MIS Report',
+    icon: IoDocumentTextOutline,
+    pathname: ''
+  },
+  {
+    name: 'SMS',
+    icon: MdEmail,
+    pathname: ''
+  },
+  {
+    name: 'Date Change',
+    icon: BsFillCalendarCheckFill,
+    pathname: ''
+  },
+  {
+    name: 'Bulk Negative',
+    icon: IoDocument,
+    pathname: ''
+  },
+  {
+    name: 'Report',
+    icon: IoDocument,
+    pathname: ''
+  },
+]
+
 
 const SideBar = () => {
   return (
@@ -20,29 +104,21 @@ const SideBar = () => {
           <MdDashboard />
           <span>Dashboard</span>
         </div>
-        <div className="sideBarItem">
-          <IoBarChartSharp />
-          <span>Finance</span>
-        </div>
-        <div className="sideBarItem">
-          <RiBillFill />
-          <span>Edit Bill</span>
-        </div>
-        <div className="sideBarItem">
-          <HiDocumentReport />
-          <span>Reports</span>
-        </div>
-        <div className="sideBarItem">
-          <RiLogoutBoxFill />
-          <span>log Out</span>
-        </div>
+        {
+          navData.map(e => (
+            <div className="sideBarItem">
+              <e.icon />
+              <span>{e.name}</span>
+            </div>
+          ))
+        }
 
       </SideBarComponents>
 
-      <div className="footer">
+      {/* <div className="footer">
         <span>All rights reserved</span>
         <img src={Logo} alt="" />
-      </div>
+      </div> */}
 
     </SideBarContainer>
   )
@@ -63,6 +139,7 @@ const SideBarContainer = styled.div`
   border-bottom-right-radius: 16px;
   padding: 8px 16px;
   box-shadow: rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem;
+  overflow-y: auto;
 
   hr{
     border: 1px solid #46323230;
