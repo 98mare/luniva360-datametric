@@ -11,7 +11,7 @@ const index = () => {
       <SideBar></SideBar>
       <div className="mainContainer">
         <NavBar />
-        <Dashboard></Dashboard>
+        {/* <Dashboard></Dashboard> */}
       </div>
     </LayoutMainContainer>
   )
