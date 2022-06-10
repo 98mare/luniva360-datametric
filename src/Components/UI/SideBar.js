@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import Logo from '../../Assets/Images/lunivatech-360-01.png'
 // import { AiFillHome } from "react-icons/ai"
@@ -7,92 +7,125 @@ import { MdDashboard, MdAttachMoney, MdEmail } from 'react-icons/md'
 import { IoBarChartSharp, IoLogoWechat, IoDocumentText, IoDocument, IoDocumentTextOutline } from 'react-icons/io5'
 import { FaBuilding, FaStethoscope } from 'react-icons/fa'
 import { BsClipboardData, BsCalendar3, BsGearWideConnected, BsFillCalendarCheckFill } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
+import NavigationLink from './NavigationLink'
 
 const navData = [
   {
+    id: 1,
+    name: 'Dashboard',
+    icon: MdDashboard,
+    pathname: '/Dashboard'
+  },
+  {
+    id: 2,
     name: 'Datametric Report',
     icon: FaBuilding,
-    pathname: ''
+    pathname: '/DatametricReport'
   },
   {
+    id: 3,
     name: 'Finance Dashboard',
     icon: IoBarChartSharp,
-    pathname: ''
+    pathname: '/FinanceDashboard'
   },
   {
+    id: 4,
     name: 'Department Analytucs',
     icon: FaBuilding,
-    pathname: ''
+    pathname: '/DepartmentAnalytucs'
   },
   {
-    name: 'Outsourcing analytics',
+    id: 5,
+    name: 'Outsourcing Analytics',
     icon: BsClipboardData,
-    pathname: ''
+    pathname: '/OutsourcingAnalytics'
   },
   {
+    id: 6,
     name: 'Marketing Analytics',
     icon: BsCalendar3,
-    pathname: ''
+    pathname: '/MarketingAnalytics'
   },
   {
+    id: 7,
     name: 'TAT Analysis',
     icon: IoLogoWechat,
-    pathname: ''
+    pathname: '/TATAnalysis'
   },
   {
+    id: 8,
     name: 'Test Analysis',
     icon: FaStethoscope,
-    pathname: ''
+    pathname: '/TestAnalysis'
   },
   {
+    id: 9,
     name: 'Expense Management',
     icon: MdAttachMoney,
-    pathname: ''
+    pathname: '/ExpenseManagement'
   },
   {
+    id: 10,
     name: 'QC Control',
     icon: BsGearWideConnected,
-    pathname: ''
+    pathname: '/QCControl'
   },
   {
+    id: 11,
     name: 'Dynamic Report',
     icon: IoDocumentText,
-    pathname: ''
+    pathname: '/DynamicReport'
   },
   {
+    id: 12,
     name: 'Edit Bill',
     icon: IoDocument,
-    pathname: ''
+    pathname: '/EditBill'
   },
   {
+    id: 13,
     name: 'MIS Report',
     icon: IoDocumentTextOutline,
-    pathname: ''
+    pathname: '/MISReport'
   },
   {
+    id: 14,
     name: 'SMS',
     icon: MdEmail,
-    pathname: ''
+    pathname: '/SMS'
   },
   {
+    id: 15,
     name: 'Date Change',
     icon: BsFillCalendarCheckFill,
-    pathname: ''
+    pathname: '/DateChange'
   },
   {
+    id: 16,
     name: 'Bulk Negative',
     icon: IoDocument,
-    pathname: ''
+    pathname: '/BulkNegative'
   },
   {
+    id: 17,
     name: 'Report',
     icon: IoDocument,
-    pathname: ''
+    pathname: '/Report'
   },
 ]
 
 
 const SideBar = () => {
+  let pathname = window.location.pathname
+  const [IsActive, setIsActive] = useState(false)
+  const handleClick = () => {
+    setIsActive(true)
+  }
+
+
+
+
   return (
     <SideBarContainer>
       <Logocontainer>
@@ -106,10 +139,9 @@ const SideBar = () => {
         </div>
         {
           navData.map(e => (
-            <div className="sideBarItem">
-              <e.icon />
-              <span>{e.name}</span>
-            </div>
+
+            <NavigationLink data={e} cPathname={pathname} />
+
           ))
         }
 
@@ -133,13 +165,38 @@ const SideBarContainer = styled.div`
   /* margin: 20px 0; */
   top: 50%;
   transform: translateY(-50%);
-  border-radius: 16px;
+  ${'' /* border-radius: 16px; */}
   position: fixed;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
   padding: 8px 16px;
   box-shadow: rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem;
   overflow-y: auto;
+
+
+
+  /* width */
+::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 50%;
+  
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  margin: 20px 0;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3c445d35; 
+  margin: 10px 0;
+  border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3c445d; 
+  width: 10px;
+}
 
   hr{
     border: 1px solid #46323230;

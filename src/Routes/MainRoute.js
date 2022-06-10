@@ -5,12 +5,14 @@ import {
   Route,
 } from "react-router-dom";
 import DashBoard from '../Pages/Dashboard'
-import DatametricReport from '../Pages/DatametricReport/index2'
+import FinanceDashboard from '../Pages/FinanceDashboard'
+// import DatametricReport from '../Pages/DatametricReport'
 const MainRoute = () => {
   return (
     <Routes>
-      <Route exact path='/' element={<DashBoard />}></Route>
-      <Route exact path='/DatametricReport' element={<DatametricReport/>}></Route>
+      <Route exact path='/Dashboard' element={<DashBoard />}></Route>
+      {/* <Route exact path='/DatametricReport' element={<DatametricReport />}></Route> */}
+      <Route exact path='/FinanceDashboard' element={<FinanceDashboard />}></Route>
     </Routes>
   )
 }
