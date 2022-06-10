@@ -43,7 +43,7 @@ const LayoutMainContainer = styled.div`
     right: 0;
     width: calc(100% - 250px);
     min-height: 100vh;
-    background: #fefefe;
+    /* background: #fefefe; */
     padding: 20px;
 
     

@@ -8,7 +8,7 @@ const index = () => {
     <>
       <Demmo></Demmo>
       {/* <button>click me</button> */}
-      <Link to={'/DatametricReport'}>click me</Link>
+      {/* <Link to={'/DatametricReport'}>click me</Link> */}
     </>
   )
 }
