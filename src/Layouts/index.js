@@ -15,9 +15,9 @@ const index = (props) => {
       <div className="mainContainer">
         <NavBar />
         {/* <Layout> */}
-          <div className="container">
-            <MainRoute {...props} />
-          </div>
+        <div className="container">
+          <MainRoute {...props} />
+        </div>
 
         {/* </Layout> */}
 
