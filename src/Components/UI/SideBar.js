@@ -140,8 +140,14 @@ const SideBar = () => {
         {
           navData.map(e => (
 
-            <NavigationLink data={e} cPathname={pathname} />
-
+            // <NavigationLink data={e} cPathname={pathname} />
+            // <div className={` sideBarItem ${IsActive && 'active'}`}></div>
+            <Link to={e.pathname} onClick={() => handleClick()}>
+              <div className={` sideBarItem ${pathname.includes(e.pathname) && 'active'}`}>
+                <e.icon />
+                <span>{e.name}</span>
+              </div>
+            </Link>
           ))
         }
 

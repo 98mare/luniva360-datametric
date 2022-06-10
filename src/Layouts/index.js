@@ -14,15 +14,15 @@ const index = (props) => {
       <SideBar></SideBar>
       <div className="mainContainer">
         <NavBar />
-        {/* <Layout> */}
         <div className="container">
           <MainRoute {...props} />
         </div>
 
-        {/* </Layout> */}
-
       </div>
-    </LayoutMainContainer>
+    // </LayoutMainContainer>
+    // <div className="container">
+    //   <MainRoute {...props} />
+    // </div>
   )
 }
 
